@@ -32,7 +32,7 @@ interface DataId {}
 
 export class NodeJSKernelBackend implements KernelBackend {
   private binding: TFJSBinding;
-  private tensorMap = new WeakMap<DataId, TensorInfo>();
+  private tensorMap = new Map<DataId, TensorInfo>();
 
   constructor(binding: TFJSBinding) {
     this.binding = binding;
